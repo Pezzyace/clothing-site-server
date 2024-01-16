@@ -3,8 +3,8 @@ const nextbtn = [...document.querySelectorAll('.next-btn')];
 const prebtn = [...document.querySelectorAll('.pre-btn')];
 
 productContainers.forEach((item, i) => {
-    let containerDimenstions = item.getBoundingClientRect();
-    let containerWidth = containerDimenstions.width;
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
 
     nextbtn[i].addEventListener('click', () => {
         item.scrollLeft += containerWidth;

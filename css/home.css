@@ -32,6 +32,7 @@
     position: relative;
     overflow: hidden;
     padding: 20px 0;
+    margin-bottom: 30px;
 }
 
 .product-category{
@@ -57,7 +58,7 @@
     flex: 0 0 auto;
     width: 250px;
     height: 450px;
-    margin-right: 40px;   
+    margin-right: 40px; 
 }
 
 .product-image{
@@ -65,6 +66,22 @@
     width: 100%;
     height: 350px;
     overflow: hidden;
+    border: 1px solid #00000040;
+    border-top-left-radius: 5px;  
+    border-top-right-radius: 5px;
+}
+
+.product-image img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+.product-image a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .product-thumb{
@@ -99,6 +116,7 @@
     transition: 0.3s;
     cursor: pointer;
     opacity: 0;
+    border: 1px solid #00000020;
 }
 
 .product-card:hover .card-btn{
@@ -129,13 +147,18 @@
     margin: 5px 0;
 }
 
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .price{
     font-weight: 900;
     font-size: 20px;
 }
 
 .actual-price{
-    margin-left: 20px;
     opacity: 0.5;
     text-decoration: line-through;
 }
@@ -171,17 +194,28 @@
     opacity: 1;
 }
 
-/* collectiond */
+/********************** COLLECTION *******************/
 
 .collection-container{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .collection{
     position: relative;
+    border: 1px solid #00000020;
+}
+.collection:nth-child(1){
+    height: 400px;
+}
+.collection:nth-child(2){
+    height: 400px;
+}
+.collection:nth-child(3){
+    height: 400px;
 }
 .collection img{
     width: 100%;
@@ -196,12 +230,27 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    font-size: 50px;
+    font-size: 35px;
     text-transform: capitalize;
 }
 
-.collection:nth-child(3){
-    grid-column: span 2;
+.collection:nth-child(4){
+    grid-column: span 3;
     margin-bottom: 10px;
+    height: 400px;
 }
 
+@media (width <= 450px) {
+    .pre-btn, .next-btn{
+        background: transparent;
+    }
+    .pre-btn{
+        left: 5vw;
+    }
+    .next-btn{
+        right: 5vw;
+    }
+    .hero-section{
+        height: 100vh;
+    }
+}

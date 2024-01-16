@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .slider-container {
+      width: 400px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .slider {
+      display: flex;
+      overflow: hidden;
+      height: 40rem;
+      width: 40rem;
+    }
+    .slider img {
+      width: 100%;
+      display: none;
+    }
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      margin: 0 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .thumbnail img{
+      width: 100%;
+    }
+    .thumbnail.active {
+      border-color: #007bff;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider">
+      <img src="images/public (1).jpg" alt="Image 1" style="display: block;">
+      <img src="images/public (10).jpg" alt="Image 2">
+      <img src="images/public (11).jpg" alt="Image 3">
+    </div>
+    <div class="thumbnails">
+      <div class="thumbnail" onclick="showImage(0)"><img src="images/public (1).jpg" alt="Thumbnail 1"></div>
+      <div class="thumbnail" onclick="showImage(1)"><img src="images/public (10).jpg" alt="Thumbnail 2"></div>
+      <div class="thumbnail" onclick="showImage(2)"><img src="images/public (11).jpg" alt="Thumbnail 3"></div>
+    </div>
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+  </div>
+
+  <script>
+    let currentImage = 0;
+    const images = document.querySelectorAll('.slider img');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    function showImage(index) {
+      images[currentImage].style.display = 'none';
+      thumbnails[currentImage].classList.remove('active');
+      currentImage = index;
+      images[currentImage].style.display = 'block';
+      thumbnails[currentImage].classList.add('active');
+    }
+
+    function prevImage() {
+      const prevIndex = (currentImage - 1 + images.length) % images.length;
+      showImage(prevIndex);
+    }
+
+    function nextImage() {
+      const nextIndex = (currentImage + 1) % images.length;
+      showImage(nextIndex);
+    }
+  </script>
+</body>
+</html>

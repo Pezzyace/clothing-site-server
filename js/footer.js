@@ -3,7 +3,9 @@ const createFooter = () => {
 
     footer.innerHTML = `
     <div class="footer-content">
-        <img src="images/Untitled2.png" class="logo" alt="">
+        <a href="./index.html">
+            <img src="images/Untitled2.png" class="logo" alt="">
+        </a>
         <div class="footer-ul-container">
             <ul class="category">
                 <li class="category-title">men</li>
@@ -34,7 +36,7 @@ const createFooter = () => {
     </div>
     </div>
     <p class="footer-title">about company</p>
-    <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus laborum facere quod voluptatum eligendi ratione numquam vel, voluptatibus quia alias id dolores a iure facilis, autem recusandae. Adipisci enim dolores debitis aut quidem! Autem pariatur minus, vel sed repellat doloremque. Aliquam ut beatae vitae amet expedita, odio tempore distinctio error eius officia rerum aut veniam earum voluptatum ab commodi exercitationem laboriosam hic, laborum aspernatur adipisci dolor, sunt fugiat voluptatibus. Amet, aliquam excepturi reprehenderit voluptate officiis obcaecati tempore repellendus corrupti blanditiis deleniti est eveniet nesciunt aliquid soluta dolorum optio nostrum! Maiores recusandae sed nostrum architecto a sequi corrupti illum quae?</p>
+    <p class="info information">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus laborum facere quod voluptatum eligendi ratione numquam vel, voluptatibus quia alias id dolores a iure facilis, autem recusandae. Adipisci enim dolores debitis aut quidem! Autem pariatur minus, vel sed repellat doloremque. Aliquam ut beatae vitae amet expedita, odio tempore distinctio error eius officia rerum aut veniam earum voluptatum ab commodi exercitationem laboriosam hic, laborum aspernatur adipisci dolor, sunt fugiat voluptatibus. Amet, aliquam excepturi reprehenderit voluptate officiis obcaecati tempore repellendus corrupti blanditiis deleniti est eveniet nesciunt aliquid soluta dolorum optio nostrum! Maiores recusandae sed nostrum architecto a sequi corrupti illum quae?</p>
     <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
     <p class="info">telephone - 08105789011, 09066116544</p>
     <div class="footer-social-container">

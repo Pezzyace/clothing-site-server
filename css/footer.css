@@ -85,3 +85,45 @@ footer{
     color: #fff;
     background: rgba(0, 0, 0, 0.2);
 }
+
+@media (width <= 450px){
+    footer{
+        padding: 20px 7vw;
+    }
+    
+    .footer-content .logo{
+        height: 50px;
+    }
+    .footer-ul-container{
+        flex-wrap: wrap;
+        gap: 30px
+    }
+    
+    .footer-social-container{
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+    .info{
+        margin: 10px 0;
+    }
+    .information{
+        text-align: justify;
+    }
+}
+
+@media (width <= 550px){
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .footer-content .logo{
+        height: 100px;
+        margin: 0 auto;
+    }
+    .footer-title{
+        margin: 30px 0 10px;
+    }
+}

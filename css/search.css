@@ -1,4 +1,17 @@
-.searcch-results{
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.search{
+    display: none;
+}
+
+.search-results{
     width: 100%;
     padding: 60px 0;
 }
